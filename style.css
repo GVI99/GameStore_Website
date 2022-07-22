@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar Container */
+ 
+.navbar{
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    height: 130px;
+    justify-content: center;
+    background: #000;  /* fallback for old browsers */
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.box{
+    margin-top: -20px;
+    position: relative;
+    width: 350px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-text{
+    margin-top: 8px;
+    font-size: 45px;
+    color: #fff;
+    text-shadow:0 0 10px #0ebcf4,
+                0 0 20px #0ebcf4,
+                0 0 40px #0ebcf4,
+                0 0 80px #0ebcf4,
+                0 0 160px #0ebcf4;
+    text-decoration: none;
+    letter-spacing: 0.1em;
+}
+.lightbar{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 10px;
+    height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    z-index: 2;
+    box-shadow:0 0 10px #0ebcf4,
+                0 0 20px #0ebcf4,
+                0 0 40px #0ebcf4,
+                0 0 80px #0ebcf4,
+                0 0 120px #0ebcf4;
+animation: animatelightbar 5s linear infinite;
+}
+
+@keyframes animatelightbar
+{
+    0%,5%
+    {
+        transform: scaleY(0) translateX(0);
+    }
+    10%
+    {
+        transform: scaleY(1) translateX(0);
+    }
+    90%
+    {
+        transform: scaleY(1) translateX(calc(350px - 10px));
+    }
+    95%,100%
+    {
+        transform: scaleY(0) translateX(calc(350px - 10px));
+    }
+}
+
+.topLayer{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    animation: animatetopLayer 10s linear infinite;
+}
+
+@keyframes animatetopLayer{
+    0%,2.5%
+    {
+        transform: translateX(0);
+    }
+    5%
+    {
+        transform: translateX(0);
+    }
+    45%
+    {
+        transform: translateX(100%);
+    }
+    47.5%,50%
+    {
+        transform: translateX(100%);
+    }
+    50.001%,52.5%
+    {
+        transform: translateX(-100%);
+    }
+    55%
+    {
+        transform: translateX(-100%);
+    }
+    95%
+    {
+        transform: translateX(0%);
+    }
+    97.5%,100%
+    {
+        transform: translateX(0%);
+    }
+}
+
+.navbar-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+.navbar-item{
+   height: 80px;
+}
+
+.item-link{
+    color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    width: 100px;
+    height: 100%;
+    font-size: 18px;
+}
+
+.fa-user-circle{
+    padding: 0 5px;
+}
